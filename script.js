@@ -1,9 +1,11 @@
+// hi this is made by vansh
+
+
 var num = 0
 var list = document.getElementById('list')
 var add = document.getElementById('add')
 var inpval = document.getElementById('input')
 var clearall = document.getElementById('clear-all')
-
 function remove() {
     localStorage.delete(num)
 }
