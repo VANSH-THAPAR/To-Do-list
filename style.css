@@ -6,6 +6,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    /* background: #393636; */
+    background-image: url('abstract-blue-background-simple-design-for-your-website-free-vector.jpg');
+    background-position: center;
+    /* background-size: cover; */
+    height: 100%;
+    width: auto;
+    background-repeat: no-repeat;
+}
+
 .nav{
     background: rgb(114, 10, 225);
 }
@@ -17,9 +27,12 @@
 }
 #display{
     border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
     width: 40%;
     min-height: 200px;
     height: fit-content;
+    background-color: rgba(39, 40, 122, 0);
+    /* background: none; */
 }
 #control{
     display: flex;
@@ -31,7 +44,7 @@
     display: block;
     width:25%;
     height:50px;
-    background: white;
+    background: rgb(255, 255, 255);
     font-size: larger;
     font-weight: bolder;
 }
@@ -45,8 +58,12 @@
     padding-top: 10%;
 }
 #control-parent{
+    background-color: rgba(39, 40, 122, 0);
     width: 40%;
+    max-width: 300px;
+    height: fit-content;
     border: 2px solid black;
+    border-radius: 15px;
 }
 #input-parent{
     display: flex;

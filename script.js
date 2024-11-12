@@ -24,13 +24,15 @@ add.addEventListener('click', () => {
     removebutton.style.justifyContent='center'
     removebutton.style.alignItems='center'
     removebutton.style.display='flex';
-    removebutton.style.border='2px solid black'
+    removebutton.style.border='2px solid white'
     li.appendChild(removebutton)
     li.style.listStyle = 'none'
     li.style.paddingLeft = '10px'
     li.style.paddingBottom = '4px'
     li.style.fontWeight='bold'
     removebutton.style.fontfamily='Segoe UI'
+    removebutton.style.color='white';
+    li.style.color='white';
     li.style.fontSize='20px'
     list.appendChild(li)
     inpval.value = ''
