@@ -72,11 +72,11 @@ add.addEventListener('click', () => {
     num++
     let p=JSON.stringify(num);
     var li = document.createElement('li')
-    localStorage.setItem(1, p)
-    localStorage.setItem(num, inpval.value)
+    localStorage.setItem(1,num.toString())
+    localStorage.setItem(num.toString(), (inpval.value).toString())
     var removebutton = document.createElement('div')
     removebutton.textContent = 'x'
-    li.innerHTML = localStorage.getItem(num)
+    li.innerHTML = localStorage.getItem(num.toString())
     removebutton.style.borderRadius ='50%';
     removebutton.style.width ='20px';
     removebutton.style.cursor ='pointer'
@@ -110,9 +110,8 @@ add.addEventListener('click', () => {
         removebutton.parentElement.style.display = 'none';
         localStorage.removeItem(num)
         
-        num--
-        p=JSON.stringify(num);
-        localStorage.setItem(1, p)
+        num--;
+        localStorage.setItem("1", num.toString())
     })
     li.style.width='90%'
     li.style.display='flex'
@@ -171,17 +170,15 @@ inpval.addEventListener('keydown', (event) => {
 clearall.addEventListener('click', () => {
     num = 1
     localStorage.clear()
-    
-    let p=JSON.stringify(num);
-    localStorage.setItem(1, p)
+    localStorage.setItem("1", num.toString())
     list.innerHTML = ''
 })
 document.addEventListener('DOMContentLoaded',()=>{  
-    num=parseInt(localStorage.getItem(1)) || 1;
+    num=parseInt(localStorage.getItem("1")) || 1;
     for(let num1=2;num1<=num;num1++){
         let lis = document.createElement('li')
         list.appendChild(lis);
-        lis.innerHTML=localStorage.getItem(num1)
+        lis.innerHTML=localStorage.getItem(num1.toString())
         var removebutton = document.createElement('div')
         removebutton.textContent = 'x';
         removebutton.style.borderRadius ='50%';
@@ -211,8 +208,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             localStorage.removeItem(num1);
             num--;
             
-        p=JSON.stringify(num);
-            localStorage.setItem(1, p);
+            localStorage.setItem("1", num.toString());
         })
     }
 })
