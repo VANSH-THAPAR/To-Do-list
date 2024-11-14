@@ -5,6 +5,7 @@ var inpval = document.getElementById('input')
 var clearall = document.getElementById('clear-all')
 let time =document.getElementById('time');
 let day =document.getElementById('day');
+let p=JSON.stringify(num);
 function updatetime(){
     const now= new Date();
     const hours= String(now.getHours()).padStart(2,'0');
@@ -110,8 +111,7 @@ add.addEventListener('click', () => {
         localStorage.removeItem(num)
         
         num--
-        
-        let p=JSON.stringify(num);
+        p=JSON.stringify(num);
         localStorage.setItem(1, p)
     })
     li.style.width='90%'
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             localStorage.removeItem(num1);
             num--;
             
-        let p=JSON.stringify(num);
+        p=JSON.stringify(num);
             localStorage.setItem(1, p);
         })
     }
