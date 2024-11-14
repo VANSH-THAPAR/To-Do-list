@@ -1,4 +1,4 @@
-var num = 1;
+let num = 1;
 var list = document.getElementById('list')
 var add = document.getElementById('add')
 var inpval = document.getElementById('input')
