@@ -1,11 +1,10 @@
-let num = 1;
+var num = 1;
 var list = document.getElementById('list')
 var add = document.getElementById('add')
 var inpval = document.getElementById('input')
 var clearall = document.getElementById('clear-all')
 let time =document.getElementById('time');
 let day =document.getElementById('day');
-let p=JSON.stringify(num);
 function updatetime(){
     const now= new Date();
     const hours= String(now.getHours()).padStart(2,'0');
@@ -70,13 +69,12 @@ function remove() {
 }
 add.addEventListener('click', () => {
     num++
-    let p=JSON.stringify(num);
     var li = document.createElement('li')
-    localStorage.setItem(1,num.toString())
-    localStorage.setItem(num.toString(), (inpval.value).toString())
+    localStorage.setItem(1, num)
+    localStorage.setItem(num, inpval.value)
     var removebutton = document.createElement('div')
     removebutton.textContent = 'x'
-    li.innerHTML = localStorage.getItem(num.toString())
+    li.innerHTML = localStorage.getItem(num)
     removebutton.style.borderRadius ='50%';
     removebutton.style.width ='20px';
     removebutton.style.cursor ='pointer'
@@ -110,8 +108,8 @@ add.addEventListener('click', () => {
         removebutton.parentElement.style.display = 'none';
         localStorage.removeItem(num)
         
-        num--;
-        localStorage.setItem("1", num.toString())
+        num--
+        localStorage.setItem(1, num)
     })
     li.style.width='90%'
     li.style.display='flex'
@@ -120,8 +118,7 @@ add.addEventListener('click', () => {
 
 inpval.addEventListener('keydown', (event) => {
     if(event.key=="Enter"){
-    add.click();
-        //     num++
+    //     num++
     //     var li = document.createElement('li')
     //     localStorage.setItem(1, num)
     //     localStorage.setItem(num, inpval.value)
@@ -170,15 +167,15 @@ inpval.addEventListener('keydown', (event) => {
 clearall.addEventListener('click', () => {
     num = 1
     localStorage.clear()
-    localStorage.setItem("1", num.toString())
+    localStorage.setItem(1, num)
     list.innerHTML = ''
 })
 document.addEventListener('DOMContentLoaded',()=>{  
-    num=parseInt(localStorage.getItem("1")) || 1;
+    num=parseInt(localStorage.getItem(1)) || 1;
     for(let num1=2;num1<=num;num1++){
         let lis = document.createElement('li')
         list.appendChild(lis);
-        lis.innerHTML=localStorage.getItem(num1.toString())
+        lis.innerHTML=localStorage.getItem(num1)
         var removebutton = document.createElement('div')
         removebutton.textContent = 'x';
         removebutton.style.borderRadius ='50%';
@@ -207,8 +204,12 @@ document.addEventListener('DOMContentLoaded',()=>{
             target.parentElement.style.display = 'none';
             localStorage.removeItem(num1);
             num--;
-            
-            localStorage.setItem("1", num.toString());
+            localStorage.setItem(1, num);
         })
     }
+    inpval.addEventListener('keydown', (event) => {
+        if(event.key=="Enter"){
+        add.click()
+        }    
+})
 })
