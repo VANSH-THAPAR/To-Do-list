@@ -1,37 +1,32 @@
-/* hi this is made by vansh */
-/* hi this is made by vansh */
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    /* background: #393636; */
-    background-image: url('abstract-blue-background-simple-design-for-your-website-free-vector.jpg');
+    background-image: url('wp9409808-animations-4k-wallpapers.jpg');
     background-position: center;
-    /* background-size: cover; */
-    height: 100%;
+    background-size: cover;
+    height: 100vh;
     width: auto;
     background-repeat: no-repeat;
 }
-
 .nav{
-    background: rgb(114, 10, 225);
+    background: rgba(60, 58, 58, 0.386);
 }
 .welcome{
-    color: rgb(250, 250, 250);
+    color: rgb(0, 0, 0);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;padding: 10px;
     display: flex;
     justify-content: center;
 }
 #display{
-    border: 2px solid rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 15px;
-    width: 40%;
+    width: 30%;
     min-height: 200px;
     height: fit-content;
-    background-color: rgba(39, 40, 122, 0);
+    background-color: rgba(0, 0, 0, 0);
     /* background: none; */
 }
 #control{
@@ -44,11 +39,25 @@ body{
     display: block;
     width:25%;
     height:50px;
-    background: rgb(255, 255, 255);
+    border-radius: 15%;
     font-size: larger;
     font-weight: bolder;
 }
+#add{
+    background: rgba(58, 240, 73, 0.449);
+    
+}
+#clear-all{
+    background-color: rgba(58, 240, 234, 0.449);
+}
+#tbh{
+    background-color: rgba(240, 143, 58, 0.449);
+
+}
 #today-task{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
 }
@@ -62,7 +71,7 @@ body{
     width: 40%;
     max-width: 300px;
     height: fit-content;
-    border: 2px solid black;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 15px;
 }
 #input-parent{
@@ -73,4 +82,25 @@ body{
 #input{
     width: 85%;
     height: 50px;
+}
+#time-parent{
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 2.8vw;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#time{
+    display: flex;
+    justify-content: end;
+}
+#day{
+    display: flex;
+    justify-content: end;
 }
