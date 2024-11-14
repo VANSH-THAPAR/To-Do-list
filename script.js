@@ -171,7 +171,7 @@ clearall.addEventListener('click', () => {
     list.innerHTML = ''
 })
 document.addEventListener('DOMContentLoaded',()=>{  
-    num=parseInt(localStorage.getItem(1));
+    num=parseInt(localStorage.getItem(1)) || 1;
     for(let num1=2;num1<=num;num1++){
         let lis = document.createElement('li')
         list.appendChild(lis);
