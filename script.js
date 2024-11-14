@@ -69,8 +69,9 @@ function remove() {
 }
 add.addEventListener('click', () => {
     num++
+    let p=JSON.stringify(num);
     var li = document.createElement('li')
-    localStorage.setItem(1, num)
+    localStorage.setItem(1, p)
     localStorage.setItem(num, inpval.value)
     var removebutton = document.createElement('div')
     removebutton.textContent = 'x'
@@ -109,7 +110,9 @@ add.addEventListener('click', () => {
         localStorage.removeItem(num)
         
         num--
-        localStorage.setItem(1, num)
+        
+        let p=JSON.stringify(num);
+        localStorage.setItem(1, p)
     })
     li.style.width='90%'
     li.style.display='flex'
@@ -168,7 +171,9 @@ inpval.addEventListener('keydown', (event) => {
 clearall.addEventListener('click', () => {
     num = 1
     localStorage.clear()
-    localStorage.setItem(1, num)
+    
+    let p=JSON.stringify(num);
+    localStorage.setItem(1, p)
     list.innerHTML = ''
 })
 document.addEventListener('DOMContentLoaded',()=>{  
@@ -205,7 +210,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             target.parentElement.style.display = 'none';
             localStorage.removeItem(num1);
             num--;
-            localStorage.setItem(1, num);
+            
+        let p=JSON.stringify(num);
+            localStorage.setItem(1, p);
         })
     }
 })
